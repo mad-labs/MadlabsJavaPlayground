@@ -31,33 +31,55 @@ public class PlayGroundCalculator {
 		MattyCalculator mattyCalculator = new MattyCalculator();
 
 		/*
-		 * LEVEL 1: start our application
+		 * LEVEL 0: start our application
 		 * Your objective is to create a method in MattyCalculator.java to start our application
 		 */
 
-		//START LEVEL 1
+		//START LEVEL 0
 		System.out.println("## Starting MattyCalculator application ##");
 		mattyCalculator.start();
-		//END LEVEL 1
+		//END LEVEL 0
 
 
 
 		/*
-		 * LEVEL 2: getting a result
+		 * LEVEL 1: getting a result
 		 * Your objective is to create a method in MattyCalculator.java to obtain result of calculation.
 		 * You will need a field in the MattyCalculator.java to store result of calculation. Initialize it
 		 * with 0
 		 */
 
-		//START LEVEL 2
-		System.out.println("## Testing initialization. mattyCalculator.getResult() should return 0 ##");
+		//START LEVEL 1
 		double result = mattyCalculator.getResult();
 
 		//test the expected result
+		System.out.println("## Testing initialization. mattyCalculator.getResult() should return 0 ##");
 		if (result != 0){
 			throw new RuntimeException("Error!!! the result should be 0!!!");
 		}
 		//END LEVEL 1
+
+
+
+
+		/*
+		 * LEVEL 2: sum of 2 number
+		 * Your objective is to create a method in MattyCalculator.java that stores 2 number, and a method to sum them.
+		 * You will need some fields in the MattyCalculator.java to store x, y and result. Initialize them with 0
+		 */
+
+		//START LEVEL 21
+		mattyCalculator.setX(10);
+		mattyCalculator.setY(5);
+		mattyCalculator.sum();
+		double result = mattyCalculator.getResult();
+
+		//test the expected result
+		System.out.println("## Testing: given x=10 and y=5, when call mattyCalculator.sum(), mattyCalculator.getResult() should return 15 ##");
+		if (result != 15){
+			throw new RuntimeException("Error!!! the result should be 15!!!");
+		}
+		//END LEVEL 2
 
 		System.out.println("## MattyCalculator application ends ##");
 
