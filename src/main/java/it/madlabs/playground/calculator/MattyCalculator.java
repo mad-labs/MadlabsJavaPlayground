@@ -6,12 +6,20 @@ package it.madlabs.playground.calculator;
  * 
  * Delete the comment in the PlayGroundCalculator after completation of every level.
  */
-public class MattyCalculator {
-  public void start(){
-    System.out.println("@@@ Starting MattyCalculator... @@@");
-  }
+  public class MattyCalculator {
+    
+    // Hint: try to decomment code below, it could not work, but maybe it will aid you!
+    //public MattyCalculator(String creationMessage){
+    //  System.out.println("@@@ new MattyCalculator created with message: " + message + " @@@");
+    //}
 
-//  public double getResult(){
-//    return 1d;
-//  }
+    // Hint: try to decomment code below, it could not work, but maybe it will aid you!
+    //public void start(){
+    //  System.out.println("@@@ Starting MattyCalculator... @@@")
+    //}
+
+    // Hint: try to decomment code below, it could not work, but maybe it will aid you!
+    //public double getResult(){
+    //    return -1d;
+    //}
 }
