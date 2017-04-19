@@ -9,17 +9,17 @@ package it.madlabs.playground.calculator;
   public class MattyCalculator {
     
     // Hint: try to decomment code below, it could not work, but maybe it will aid you!
-    //public MattyCalculator(String creationMessage){
-    //  System.out.println("@@@ new MattyCalculator created with message: " + message + " @@@");
-    //}
+    public MattyCalculator(String creationMessage){
+     System.out.println("@@@ new MattyCalculator created with message: " + creationMessage + " @@@");
+    }
 
     // Hint: try to decomment code below, it could not work, but maybe it will aid you!
-    //public void start(){
-    //  System.out.println("@@@ Starting MattyCalculator... @@@")
-    //}
+    public void start(){
+     System.out.println("@@@ Starting MattyCalculator... @@@");
+    }
 
     // Hint: try to decomment code below, it could not work, but maybe it will aid you!
-    //public double getResult(){
-    //    return -1d;
-    //}
+    public double getResult(){
+       return -1d;
+    }
 }

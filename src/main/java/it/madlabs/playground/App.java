@@ -8,7 +8,7 @@ import it.madlabs.playground.calculator.MattyCalculator;
 /**
  * Created by gabriele on 10/04/17.
  */
-public class PlayGroundCalculator {
+public class App {
 
 	/*
 	 * This is the starting point of our program. when program start it search in this class the main() method and execute it
@@ -26,7 +26,7 @@ public class PlayGroundCalculator {
 	 * and improving the class MattyCalculator.java to compile without error and to have successfull test results
 	 */
 	public static void main (String[] args) throws IOException {
-		System.out.println("Starting PlayGroundCalculator main... ");
+		System.out.println("Starting playGroundCalculator App main... ");
 		
 		/*
 		 * LEVEL -1: create an instance of our application
