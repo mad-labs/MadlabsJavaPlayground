@@ -1,4 +1,4 @@
-package it.madlabs.playground;
+package it.madlabs.playground.calculator;
 
 import java.io.IOException;
 import java.lang.RuntimeException;
@@ -8,7 +8,7 @@ import it.madlabs.playground.calculator.MattyCalculator;
 /**
  * Created by gabriele on 10/04/17.
  */
-public class App {
+public class CalculatorApp {
 
 	/*
 	 * This is the starting point of our program. when program start it search in this class the main() method and execute it
