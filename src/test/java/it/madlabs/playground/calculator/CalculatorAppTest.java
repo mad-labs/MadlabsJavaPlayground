@@ -5,16 +5,16 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Unit test for simple CalculatorApp.
+ * Unit test for simple CalculatorAppTest.
  */
-public class CalculatorApp extends TestCase
+public class CalculatorAppTest extends TestCase
 {
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public CalculatorApp( String testName ) {
+    public CalculatorAppTest( String testName ) {
         super( testName );
     }
 
@@ -22,7 +22,7 @@ public class CalculatorApp extends TestCase
      * @return the suite of tests being tested
      */
     public static Test suite() {
-        return new TestSuite( CalculatorApp.class );
+        return new TestSuite( CalculatorAppTest.class );
     }
 
     /**
