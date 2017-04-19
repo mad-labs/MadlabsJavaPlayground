@@ -20,6 +20,6 @@ package it.madlabs.playground.calculator;
 
     // Hint: try to decomment code below, it could not work, but maybe it will aid you!
     public double getResult(){
-       return -1d;
+       return -0d;
     }
 }
