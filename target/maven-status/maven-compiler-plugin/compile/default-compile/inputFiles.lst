@@ -1,6 +1,7 @@
-/home/gabriele/workspaceMadLabs/madlabs-java-playground/src/main/java/it/madlabs/playground/restserver/JerseyEmbeddedHTTPServerCrunchify.java
-/home/gabriele/workspaceMadLabs/madlabs-java-playground/src/main/java/it/madlabs/playground/PlayGroundRestServer.java
-/home/gabriele/workspaceMadLabs/madlabs-java-playground/src/main/java/it/madlabs/playground/PlayGroundCalculator.java
-/home/gabriele/workspaceMadLabs/madlabs-java-playground/src/main/java/it/madlabs/playground/App.java
-/home/gabriele/workspaceMadLabs/madlabs-java-playground/src/main/java/it/madlabs/playground/restserver/CrunchifyAPI.java
+/home/gabriele/workspaceMadLabs/madlabs-java-playground/src/main/java/it/madlabs/playground/calculator/gui/CalcGui.java
 /home/gabriele/workspaceMadLabs/madlabs-java-playground/src/main/java/it/madlabs/playground/calculator/MattyCalculator.java
+/home/gabriele/workspaceMadLabs/madlabs-java-playground/src/main/java/it/madlabs/playground/restserver/JerseyEmbeddedHTTPServerCrunchify.java
+/home/gabriele/workspaceMadLabs/madlabs-java-playground/src/main/java/it/madlabs/playground/calculator/utils/MattyCalculatorUtils.java
+/home/gabriele/workspaceMadLabs/madlabs-java-playground/src/main/java/it/madlabs/playground/calculator/CalculatorApp.java
+/home/gabriele/workspaceMadLabs/madlabs-java-playground/src/main/java/it/madlabs/playground/restserver/CrunchifyAPI.java
+/home/gabriele/workspaceMadLabs/madlabs-java-playground/src/main/java/it/madlabs/playground/restserver/PlayGroundRestServer.java
