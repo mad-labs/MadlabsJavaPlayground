@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.lang.RuntimeException;
 import java.util.Date;
 
-import it.madlabs.playground.calculator.MattyCalculator;
+import it.madlabs.playground.calculator.logic.MattyCalculator;
 
 /**
  * Created by gabriele on 10/04/17.

@@ -1,4 +1,4 @@
-package it.madlabs.playground.calculator;
+package it.madlabs.playground.calculator.logic;
 
 import it.madlabs.playground.calculator.utils.MattyCalculatorUtils;
 
