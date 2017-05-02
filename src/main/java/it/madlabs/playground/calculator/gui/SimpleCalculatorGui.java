@@ -11,11 +11,13 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.event.EventHandler;
 import javafx.event.ActionEvent;
+import javafx.scene.Node;
+import javafx.geometry.Pos;
 
 
 /**
  *
- * @author Cristina
+ * @author Gabriele
  */
 public class SimpleCalculatorGui extends Application {
 
@@ -26,82 +28,84 @@ public class SimpleCalculatorGui extends Application {
         launch(args);
     }
 
+    private final Label labelX = new Label(" X: ");
+    private final TextField fieldX = new TextField();
+    private final Label labelY = new Label(" Y: ");
+    private final TextField fieldY = new TextField();
+    private final Button plus = new Button("+");
+    private final Button minus = new Button("-");
+    private final Button multiply = new Button("*");
+    private final Button divide = new Button("/");
+    private final Label labelResult = new Label("RESULT: ");
+
     @Override
-    public void start(Stage scena) {
-                
-        Label et1 = new Label(" X: ");
-        TextField nr1 = new TextField();
-        
-        Label et2 = new Label(" Y: ");
-        TextField nr2 = new TextField();
+    public void start(Stage scene) {
 
-        Button plus = new Button();
-        plus.setText("+");
-
-        Button minus = new Button();
-        minus.setText("-");
-
-        Button multiply = new Button();
-        multiply.setText("*");
-
-        Button divide = new Button();
-        divide.setText("/");
-        
-        Label et4 = new Label("RESULT: 0.0");
-
-        scena.setTitle("SimpleCalculator");
-        FlowPane root = new FlowPane();
-        
-        final HBox hbox1 = new HBox();
-        hbox1.setSpacing(5);
-    
-        final HBox hbox2 = new HBox();
-        hbox2.setSpacing(5);
-
-        final HBox hbox3 = new HBox();
-        hbox3.setSpacing(5);
-
-        final HBox hbox4 = new HBox();
-        hbox4.setSpacing(5);
-
-        final HBox hbox5 = new HBox();
-        hbox5.setSpacing(5);
-
-        final VBox vbox1 = new VBox();
-        vbox1.setSpacing(5);
-
-        hbox1.getChildren().add(et1);
-        hbox1.getChildren().add(nr1);
-        
-        hbox2.getChildren().add(et2);
-        hbox2.getChildren().add(nr2);
-                
-        hbox3.getChildren().add(plus);
-        hbox3.getChildren().add(minus);
-        hbox3.getChildren().add(multiply);
-        hbox3.getChildren().add(divide);
-        
-        hbox4.getChildren().add(et4);
-
-
-        vbox1.getChildren().add(hbox1);
-        vbox1.getChildren().add(hbox2);
-        vbox1.getChildren().add(hbox3);
-        vbox1.getChildren().add(hbox4);
-
-        root.getChildren().add(vbox1);
-
-        //Setting an action for the Submit button
+        //Setting an action for the plus button
         plus.setOnAction(new EventHandler<ActionEvent>() {
-
         @Override
             public void handle(ActionEvent e) {
-                et4.setText("RESULT: 1.1");
+                String result = "1.0";
+                labelResult.setText("RESULT: " + result);
+            }
+        });
+        //Setting an action for the minus button
+        minus.setOnAction(new EventHandler<ActionEvent>() {
+        @Override
+            public void handle(ActionEvent e) {
+                String result = "2.0";
+                labelResult.setText("RESULT: " + result);
+            }
+        });
+        //Setting an action for the multiply button
+        multiply.setOnAction(new EventHandler<ActionEvent>() {
+        @Override
+            public void handle(ActionEvent e) {
+                String result = "3.0";
+                labelResult.setText("RESULT: " + result);
+            }
+        });
+        //Setting an action for the divide button
+        divide.setOnAction(new EventHandler<ActionEvent>() {
+        @Override
+            public void handle(ActionEvent e) {
+                String result = "4.0";
+                labelResult.setText("RESULT: " + result);
             }
         });
 
-        scena.setScene(new Scene(root, 250, 150));
-        scena.show();
+        scene.setTitle("SimpleCalculator");
+        Scene layout = composeSceneLayout();
+        scene.setScene(layout);
+        scene.show();
+    }
+
+    private Scene composeSceneLayout(){
+        HBox hbox1 = composeHorizontalLayout(labelX, fieldX);
+        HBox hbox2 = composeHorizontalLayout(labelY, fieldY);
+        HBox hbox3 = composeHorizontalLayout(plus, minus, multiply, divide);
+        HBox hbox4 = composeHorizontalLayout(labelResult);
+        VBox vbox = composeVerticalLayout(hbox1, hbox2, hbox3, hbox4);
+        Scene scene = new Scene(vbox, 250, 200);
+        return scene;
+    }
+
+    public HBox composeHorizontalLayout(Node... nodes){
+        final HBox hbox = new HBox(10);
+        for(int i = 0; i < nodes.length; i++){
+            hbox.getChildren().add(nodes[i]);
+            hbox.setAlignment(Pos.CENTER);
+        }
+        return hbox;
+    }
+
+    public VBox composeVerticalLayout(Node... nodes){
+        final VBox vbox = new VBox(10);
+        for(int i = 0; i < nodes.length; i++){
+            vbox.getChildren().add(nodes[i]);
+            vbox.setAlignment(Pos.CENTER);
+        }
+        return vbox;
     }
 
 }
