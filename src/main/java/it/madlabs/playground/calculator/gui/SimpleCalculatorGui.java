@@ -25,7 +25,8 @@ public class SimpleCalculatorGui extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        launch(args);
+        SimpleCalculatorGui simpleCalculatorGui = new SimpleCalculatorGui();
+        SimpleCalculatorGui.launch(args);
     }
 
     private final Label labelX = new Label(" X: ");

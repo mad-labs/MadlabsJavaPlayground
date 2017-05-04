@@ -240,7 +240,7 @@ public class CalculatorApp {
 
 	}
 
-	private showPrompt(){
+	private void showPrompt(){
 		System.out.println("\n\n\n");
 		System.out.println("Welcome USER! Let's do some maths! :)");
 		System.out.println("\n\n");
