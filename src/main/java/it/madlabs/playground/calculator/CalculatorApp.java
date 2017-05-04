@@ -144,7 +144,6 @@ public class CalculatorApp {
 		 * LEVEL 4: interactive prompt
 		 * Your objective is to ask the user the number and the operation to do.
 		 * You can choose to store the operation and do it later or do it immediately.
-		 * At the end you can 
 		 * You can use Class MattyCalculatorUtils to ask user input, to read it and show result.
 		 */
 
@@ -168,10 +167,90 @@ public class CalculatorApp {
 		 }
 		 //END LEVEL 4
 
+		/*
+		 * LEVEL 5: error handling
+		 * Your objective is to trow errors and catch it, to prevent wrong inputs.
+		 * If you choose to do operation inside askOperation, move your code in getResult and use
+		 * askOperation to store user input.
+		 * 
+		 * Throw a new IllegalArgumentException() with meagniful message if user insert wrong
+		 * inpunt when asked
+		 */
+
+		// // //START LEVEL 5
+		// showPrompt();
+		// boolean validOpetation = true;
+	 	// while(validOpetation) {
+		// 	try {
+		// 		mattyCalculator.askX();
+		// 		mattyCalculator.askY();
+		// 		mattyCalculator.askOperation();
+		// 		mattyCalculator.showResult();
+		// 	} catch (IllegalArgumentException e) {
+		// 		System.out.println("Argh! Your input was wrong!! Please input only number or valid operation!");
+		// 	}
+		//  }
+		// //END LEVEL 5
+
+		/*
+		 * LEVEL 6: personal error handling
+		 * Now you can handle errors, try to personalize it!
+		 * 
+		 * Create 2 class that exstends IllegalArgumentException: NotANumberArgumentException and InvalidOperationArgumentException
+		 * Try to use the right type in right method, to have a meagniful output
+		 */
+
+		// // //START LEVEL 6
+		// showPrompt();
+		// boolean validOpetation = true;
+	 	// while(validOpetation) {
+
+		// 	try {
+		// 		mattyCalculator.askX();
+		// 		mattyCalculator.askY();
+		// 		mattyCalculator.askOperation();
+		// 		mattyCalculator.showResult();
+		// 	} catch (NotANumberArgumentException e) {
+		// 		System.out.println("Argh! Your input not a number!!! Please input only number when calculator ask for X or Y");
+		// 	} catch (InvalidOperationArgumentException e) {
+		// 		System.out.println("Argh! Your input and invalid operation!!! Please input only valid operation when calculatro ask for it");
+		// 	} catch (Exception e) {
+		// 		System.out.println("Nooooo! I don't know this exception! Something went very wrong!!!'");
+		// 	}
+		//  }
+		// //END LEVEL 6
+
+		/*
+		 * LEVEL 7: going towards a real GUI
+		 * Using main to do stuff is not correct, main has to be the place where app start, non where it do operation
+		 * 
+		 * Copy all code that print menù and ask for input used in LEVEL 6 (here) inside a new Class inside a method called launch(String[] args).
+		 * Name this class TerminalCalculatorGui.java and place it in package it.madlabs.playground.calculator.gui
+		 * Than create a constructor of that class that take a MattyCalculator object and stores it.
+		 * You should be able to do all the stuff in LEVEL 6 just calling launch with all main parameters()
+		 */
+
+		// //START LEVEL 7
+		// TerminalCalculatorGui terminalCalculatorGui = new TerminalCalculatorGui();
+		// terminalCalculatorGui.launch(args);
+		// //END LEVEL 6
+
 		System.out.println("MattyCalculator application ends");
 
 		System.out.println("End PlayGroundCalculator main...");
 
+	}
+
+	private void showPrompt(){
+		System.out.println("\n\n\n");
+		System.out.println("Welcome USER! Let's do some maths! :)");
+		System.out.println("\n\n");
+		System.out.println("Here the instruction:");
+		System.out.println("-  to do operation you need to insert X and Y number and after choose and operation");
+		System.out.println("-  to exit press [CTRL + C]");
+		System.out.println("\n");
+		System.out.println("Enjoy the MattyClaculator! :)");
+		System.out.println("\n\n");
 	}
 
 }
