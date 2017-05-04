@@ -199,7 +199,7 @@ public class CalculatorApp {
 		 * Try to use the right type in right method, to have a meagniful output
 		 */
 
-		// // //START LEVEL 5
+		// // //START LEVEL 6
 		// showPrompt();
 		// boolean validOpetation = true;
 	 	// while(validOpetation) {
@@ -217,7 +217,22 @@ public class CalculatorApp {
 		// 		System.out.println("Nooooo! I don't know this exception! Something went very wrong!!!'");
 		// 	}
 		//  }
-		// //END LEVEL 5
+		// //END LEVEL 6
+
+		/*
+		 * LEVEL 7: going towards a real GUI
+		 * Using main to do stuff is not correct, main has to be the place where app start, non where it do operation
+		 * 
+		 * Copy all code that print menù and ask for input used in LEVEL 6 (here) inside a new Class inside a method called launch(String[] args).
+		 * Name this class TerminalCalculatorGui.java and place it in package it.madlabs.playground.calculator.gui
+		 * Than create a constructor of that class that take a MattyCalculator object and stores it.
+		 * You should be able to do all the stuff in LEVEL 6 just calling launch with all main parameters()
+		 */
+
+		// //START LEVEL 7
+		// TerminalCalculatorGui terminalCalculatorGui = new TerminalCalculatorGui();
+		// terminalCalculatorGui.launch(args);
+		// //END LEVEL 6
 
 		System.out.println("MattyCalculator application ends");
 
