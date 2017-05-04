@@ -12,3 +12,5 @@
 hs_err_pid*
 
 target
+/JavaApplication4/nbproject/private/
+/nbproject/private/
