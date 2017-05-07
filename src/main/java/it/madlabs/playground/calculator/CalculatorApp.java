@@ -157,7 +157,7 @@ public class CalculatorApp {
 		System.out.println("Enjoy the MattyClaculator! :)");
 		System.out.println("\n\n");
 
-		boolean validOpetation = true;
+		boolean validOpetation = false;
 		while(validOpetation) {
 			mattyCalculator.askX();
 			mattyCalculator.askY();
@@ -176,20 +176,20 @@ public class CalculatorApp {
 		 * inpunt when asked
 		 */
 
-		// // //START LEVEL 5
-		// showPrompt();
-		// boolean validOpetation = true;
-	 	// while(validOpetation) {
-		// 	try {
-		// 		mattyCalculator.askX();
-		// 		mattyCalculator.askY();
-		// 		mattyCalculator.askOperation();
-		// 		mattyCalculator.showResult();
-		// 	} catch (IllegalArgumentException e) {
-		// 		System.out.println("Argh! Your input was wrong!! Please input only number or valid operation!");
-		// 	}
-		//  }
-		// //END LEVEL 5
+		// //START LEVEL 5
+		showPrompt();
+		validOpetation = true;
+	 	while(validOpetation) {
+			try {
+				mattyCalculator.askX();
+				mattyCalculator.askY();
+				mattyCalculator.askOperation();
+				mattyCalculator.showResult();
+			} catch (IllegalArgumentException e) {
+				System.out.println("Argh! Your input was wrong!! Please input only number or valid operation!");
+			}
+		 }
+		//END LEVEL 5
 
 		/*
 		 * LEVEL 6: personal error handling
@@ -240,7 +240,7 @@ public class CalculatorApp {
 
 	}
 
-	private void showPrompt(){
+	private static void showPrompt(){
 		System.out.println("\n\n\n");
 		System.out.println("Welcome USER! Let's do some maths! :)");
 		System.out.println("\n\n");
