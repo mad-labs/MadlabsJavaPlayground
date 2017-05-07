@@ -1,6 +1,5 @@
 package it.madlabs.playground.calculator;
 
-import javafx.application.Application;
 import java.io.IOException;
 import java.lang.RuntimeException;
 import java.util.Date;

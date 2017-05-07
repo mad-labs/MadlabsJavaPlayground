@@ -33,12 +33,12 @@ public class SimpleCalculatorGui extends Application {
     private final TextField fieldX = new TextField();
     private final Label labelY = new Label(" Y: ");
     private final TextField fieldY = new TextField();
-    private final Button plus = new Button("+");
-    private final Button minus = new Button("-");
-    private final Button multiply = new Button("*");
-    private final Button divide = new Button("/");
+    private final Button plus = new Button(" + ");
+    private final Button minus = new Button(" - ");
+    private final Button multiply = new Button(" * ");
+    private final Button divide = new Button(" / ");
     private final Label labelOperation = new Label("");
-    private final Button equal = new Button("=");
+    private final Button equal = new Button(" = ");
     private final Label labelResult = new Label("");
 
     @Override
@@ -46,36 +46,42 @@ public class SimpleCalculatorGui extends Application {
 
         //Setting an action for the plus button
         plus.setOnAction(new EventHandler<ActionEvent>() {
-        @Override
+            @Override
             public void handle(ActionEvent e) {
-                labelOperation.setText("1" + "+" + "1");
+                System.out.println("pressed +");
             }
         });
         //Setting an action for the minus button
         minus.setOnAction(new EventHandler<ActionEvent>() {
-        @Override
+            @Override
             public void handle(ActionEvent e) {
-                labelOperation.setText("1" + "-" + "1");
+                System.out.println("pressed -");
+
             }
         });
         //Setting an action for the multiply button
         multiply.setOnAction(new EventHandler<ActionEvent>() {
-        @Override
+            @Override
             public void handle(ActionEvent e) {
-                labelOperation.setText("1" + "*" + "1");
+                System.out.println("pressed *");
             }
         });
         //Setting an action for the divide button
         divide.setOnAction(new EventHandler<ActionEvent>() {
-        @Override
+            @Override
             public void handle(ActionEvent e) {
-                labelOperation.setText("1" + "/" + "1");
+                System.out.println("pressed /");
             }
         });
         //Shot the resuult
         equal.setOnAction(new EventHandler<ActionEvent>() {
-        @Override
+            @Override
             public void handle(ActionEvent e) {
+                System.out.println("pressed =");
+                double x = extractFromField(fieldX);
+                double y = extractFromField(fieldY);
+
+                labelOperation.setText(x + " + " + y);
                 labelResult.setText("2");
             }
         });
@@ -84,6 +90,11 @@ public class SimpleCalculatorGui extends Application {
         Scene layout = composeSceneLayout();
         scene.setScene(layout);
         scene.show();
+    }
+
+    private double extractFromField(TextField textField) {
+        String xString = "" + textField.getText();
+        return "".equals(xString) ? 0 : Double.parseDouble(xString);
     }
 
     private Scene composeSceneLayout(){
