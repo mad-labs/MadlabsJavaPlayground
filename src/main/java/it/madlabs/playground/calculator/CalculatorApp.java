@@ -266,8 +266,8 @@ public class CalculatorApp {
 		System.out.println("MattyCalculator application ends");
 
 		System.out.println("End PlayGroundCalculator main...");
-
 	}
+	
 
 	private static void showPrompt(){
 		System.out.println("\n\n\n");
