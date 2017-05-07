@@ -13,21 +13,41 @@ import it.madlabs.playground.calculator.utils.MattyCalculatorUtils;
     private double x = 0d;
     private double y = 0d;
     private double result = 0d;
+    private String op = "";
     private MattyCalculatorUtils mattyCalculatorUtils = new MattyCalculatorUtils();
     
     // Hint: try to decomment code below, it could not work, but maybe it will aid you!
     public MattyCalculator(String creationMessage){
-     System.out.println("@@@ new MattyCalculator created with message: " + creationMessage + " @@@");
+      System.out.println("@@@ new MattyCalculator created with message: " + creationMessage + " @@@");
     }
 
     // Hint: try to decomment code below, it could not work, but maybe it will aid you!
     public void start(){
-     System.out.println("@@@ Starting MattyCalculator... @@@");
+      System.out.println("@@@ Starting MattyCalculator... @@@");
     }
 
     // Hint: try to decomment code below, it could not work, but maybe it will aid you!
     public double getResult(){
-       return result;
+      return this.result;
+    }
+
+    private void calculateResultByStoredOperation(){
+      switch (this.op) {
+        case "+":
+          this.sum();
+          break;
+        case "-":
+          this.subtract();
+          break;
+        case "*":
+          this.multiply();
+          break;
+        case "/":
+          this.divide();
+          break;
+        default:
+          throw new IllegalArgumentException("Argh! I don't know this operation! Going to kill myself!!!");
+      }
     }
 
     public void setX(double x){
@@ -63,26 +83,11 @@ import it.madlabs.playground.calculator.utils.MattyCalculatorUtils;
     }
 
     public void askOperation(){
-      String op = this.mattyCalculatorUtils.askAString("Please choose and opetation in '+', '-', '*', '/' and write it below: ");
-      switch (op) {
-        case "+":
-          this.sum();
-          break;
-        case "-":
-          this.subtract();
-          break;
-        case "*":
-          this.multiply();
-          break;
-        case "/":
-          this.divide();
-          break;
-        default:
-          throw new IllegalArgumentException("Argh! I don't know this operation! Going to kill myself!!!");
-      }
+      this.op = this.mattyCalculatorUtils.askAString("Please choose and opetation in '+', '-', '*', '/' and write it below: ");
     }
 
     public void showResult(){
+      this.calculateResultByStoredOperation();
       System.out.println(" > Result is: " + this.result);
     }
 }
