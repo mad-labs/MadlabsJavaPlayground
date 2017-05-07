@@ -9,13 +9,23 @@ public class MattyCalculatorUtils {
   public double askADouble(String messageToDisplay){
     System.out.println(" > " + messageToDisplay);
     System.out.print(" < ");
-    return scanner.nextDouble();
+    try {
+      return scanner.nextDouble();
+    } catch (Exception e) {
+      scanner.next();
+      throw e;
+    }
   }
 
   public String askAString(String messageToDisplay){
     System.out.println(" > " + messageToDisplay);
     System.out.print(" < ");
-    return scanner.next();
+    try {
+      return scanner.next();
+    } catch (Exception e) {
+      scanner.next();
+      throw e;
+    }
   }
 
 }

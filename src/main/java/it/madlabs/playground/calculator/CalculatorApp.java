@@ -179,7 +179,7 @@ public class CalculatorApp {
 
 		// // //START LEVEL 5
 		// showPrompt();
-		// boolean validOpetation = true;
+		// validOpetation = false; //set this false to skip this part
 	 	// while(validOpetation) {
 		// 	try {
 		// 		mattyCalculator.askX();
@@ -192,17 +192,17 @@ public class CalculatorApp {
 		//  }
 		// //END LEVEL 5
 
-		/*
-		 * LEVEL 6: personal error handling
-		 * Now you can handle errors, try to personalize it!
-		 * 
-		 * Create 2 class that exstends IllegalArgumentException: NotANumberArgumentException and InvalidOperationArgumentException
-		 * Try to use the right type in right method, to have a meagniful output
-		 */
+		// /*
+		//  * LEVEL 6: personal error handling
+		//  * Now you can handle errors, try to personalize it!
+		//  * 
+		//  * Create 2 class that exstends IllegalArgumentException: NotANumberArgumentException and InvalidOperationArgumentException
+		//  * Try to use the right type in right method, to have a meagniful output
+		//  */
 
 		// // //START LEVEL 6
 		// showPrompt();
-		// boolean validOpetation = true;
+		// validOpetation = true; //set this false to skip this part
 	 	// while(validOpetation) {
 
 		// 	try {
@@ -213,35 +213,60 @@ public class CalculatorApp {
 		// 	} catch (NotANumberArgumentException e) {
 		// 		System.out.println("Argh! Your input not a number!!! Please input only number when calculator ask for X or Y");
 		// 	} catch (InvalidOperationArgumentException e) {
-		// 		System.out.println("Argh! Your input and invalid operation!!! Please input only valid operation when calculatro ask for it");
+		// 		System.out.println("Argh! Your input and invalid operation!!! Please input only valid operation when calculator ask for it");
 		// 	} catch (Exception e) {
 		// 		System.out.println("Nooooo! I don't know this exception! Something went very wrong!!!'");
 		// 	}
 		//  }
 		// //END LEVEL 6
 
-		/*
-		 * LEVEL 7: going towards a real GUI
-		 * Using main to do stuff is not correct, main has to be the place where app start, non where it do operation
-		 * 
-		 * Copy all code that print menù and ask for input used in LEVEL 6 (here) inside a new Class inside a method called launch(String[] args).
-		 * Name this class TerminalCalculatorGui.java and place it in package it.madlabs.playground.calculator.gui
-		 * Than create a constructor of that class that take a MattyCalculator object and stores it.
-		 * You should be able to do all the stuff in LEVEL 6 just calling launch with all main parameters()
-		 */
+		// /*
+		//  * LEVEL 7: going towards a real GUI (graphical user interface)
+		//  * Using main to do stuff is not correct, main has to be the place where app start, non where do operation
+		//  *
+		//  * Create a new class calle TerminalCalculatorGui.java inside a the package it.madlabs.playground.calculator.gui 
+		//  * Copy all rows from 205 to 222 in that class inside a method with firm: launch(String[] args).
+		//  * Copy showPrompt inside that class.
+		//  * The result of the code below must be the same ad LEVEL 6.
+		//  */
 
 		// //START LEVEL 7
-		// TerminalCalculatorGui terminalCalculatorGui = new TerminalCalculatorGui();
+		// TerminalCalculatorGui terminalCalculatorGui = new TerminalCalculatorGui(new MattyCalculator("Created at " + new Date()));
 		// terminalCalculatorGui.launch(args);
-		// //END LEVEL 6
+		// //END LEVEL 7
+
+		// /*
+		//  * LEVEL 8: going towards a real GUI (graphical user interface) - part 2
+		//  *divide
+		//  * Now is time to break things! Comment all code over this rows, everythings will blows up after this level.
+		//  * Create inside MattyCalculator a new method setOp(op) that stores choosen operation
+		//  * Move all code that ask for numbers or operation inside MattyCalculator inside TerminalCalculatorGui
+		//  * MattyCalculator have to contains only calculation logic and TerminalCalculatorGui only user interface logic
+		//  * hint: Matty calculator must have only start getResult setX/Y/Op and operations methods
+		//  * Uses "this" instead of mattyCalculator for moved methods and correct them as needed
+		//  * Move all imports anche object that TerminalCalculatorGui will needs.
+		//  * The result of the code below must be the same ad LEVEL 6.
+		//  */
+
+		// //START LEVEL 8
+		// TerminalCalculatorGui terminalCalculatorGui = new TerminalCalculatorGui(new MattyCalculator("Created at " + new Date()));
+		// terminalCalculatorGui.launch(args);
+		// //END LEVEL 8
+
+		/*
+		 * LEVEL 9: a real GUI (graphical user interface)
+		 *
+		 * Try to launch SimpleCalculatorGui, as you can see there is a little graphical user interface. You can use it, as TerminalCalculatorGui, to
+		 * get input from the user and show result. You will notice that logic inside MattyCalculator will not change at all!
+		 */
 
 		System.out.println("MattyCalculator application ends");
 
 		System.out.println("End PlayGroundCalculator main...");
-
 	}
+	
 
-	private void showPrompt(){
+	private static void showPrompt(){
 		System.out.println("\n\n\n");
 		System.out.println("Welcome USER! Let's do some maths! :)");
 		System.out.println("\n\n");
