@@ -56,7 +56,6 @@ public class SimpleCalculatorGui extends Application {
             @Override
             public void handle(ActionEvent e) {
                 System.out.println("pressed -");
-
             }
         });
         //Setting an action for the multiply button
